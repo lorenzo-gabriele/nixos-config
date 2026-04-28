@@ -66,6 +66,8 @@
           "Mod+C".center-column             = {};
           "Mod+W".maximize-column           = {};
           "Mod+A".toggle-overview           = {};
+          "Mod+N".consume-or-expel-window-left  = {};
+          "Mod+M".consume-or-expel-window-right = {};
 
           # ── Focus (vim-style) ───────────────────────────────────────────
           "Mod+H".focus-column-left  = {};

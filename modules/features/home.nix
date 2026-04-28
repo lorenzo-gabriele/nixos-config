@@ -9,8 +9,6 @@
       home.stateVersion = "25.11";
       home.username = "redue";
       home.homeDirectory = "/home/redue";
-      home.file.".config/Antigravity/machineid".text = "6c1ddd78-ea52-431d-a204-22ae85a3f7c2";
-      home.file.".config/Antigravity/machineid.backup".text = "6c1ddd78-ea52-431d-a204-22ae85a3f7c2";
 
       home.file.".config/xfce4/helpers.rc".text = ''
         TerminalEmulator=kitty
@@ -33,11 +31,22 @@
         EDITOR = "micro";
         VISUAL = "micro";
         TERMINAL = "kitty";
+        NIXOS_OZONE_WL = "1";
       };
 
       services.udiskie.enable = true;
       services.udiskie.tray = "always";
       services.udiskie.notify = false;
+      services.udiskie.settings = {
+        program_options.appindicator = true;
+        icon_names.media = [ "udiskie-media" ];
+      };
+
+      home.file.".local/share/icons/hicolor/64x64/apps/udiskie-media.png".source = pkgs.runCommand "udiskie-media.png" {
+        nativeBuildInputs = [ pkgs.librsvg ];
+      } ''
+        rsvg-convert -w 64 -h 64 -f png ${pkgs.papirus-icon-theme}/share/icons/Papirus-Dark/64x64@2x/devices/drive-removable-media.svg > $out
+      '';
 
       programs.bash.enable = true;
       programs.starship.enable = true;
@@ -51,6 +60,15 @@
         "org/gnome/desktop/interface" = {
           color-scheme = "prefer-dark";
         };
+      };
+
+      xdg.desktopEntries.spotify = {
+        name = "Spotify";
+        exec = "spotify --enable-features=UseOzonePlatform --ozone-platform=x11 %U";
+        terminal = false;
+        type = "Application";
+        icon = "spotify-client";
+        categories = [ "Audio" "Music" "Player" ];
       };
 
       gtk.iconTheme = {
@@ -74,18 +92,25 @@
         yazi
         kdePackages.kate
         kdePackages.filelight
+        kdePackages.kdeconnect-kde
         gcc
         valgrind
         micro
-	fastfetch
+	    fastfetch
         sublime4
         spotify
         cowsay
         godot
         blender
         qbittorrent
-        antigravity
-     ];
+        ollama
+        inputs.llm-agents.packages.${pkgs.system}.hermes-agent
+        gemini-cli
+        asciiquarium
+        pipes
+        cava
+      ];
+
     };
   };
 }
