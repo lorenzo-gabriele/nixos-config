@@ -49,7 +49,7 @@
           # ── Apps ────────────────────────────────────────────────────────
           "Mod+Return".spawn-sh = "kitty";
           "Mod+B".spawn-sh      = "firefox";
-          "Mod+E".spawn-sh      = "${lib.getExe pkgs.kitty} ${lib.getExe pkgs.yazi}";
+          "Mod+E".spawn-sh      = "thunar";
 
           # ── Noctalia UI ─────────────────────────────────────────────────
           "Mod+S".spawn-sh = "${lib.getExe self'.packages.myNoctalia} ipc call launcher toggle";
@@ -90,8 +90,7 @@
           # ── Workspaces (by index) ───────────────────────────────────────
           "Mod+1".focus-workspace = 1;
           "Mod+2".focus-workspace = 2;
-
-"Mod+3".focus-workspace = 3;
+          "Mod+3".focus-workspace = 3;
           "Mod+4".focus-workspace = 4;
           "Mod+5".focus-workspace = 5;
           "Mod+6".focus-workspace = 6;

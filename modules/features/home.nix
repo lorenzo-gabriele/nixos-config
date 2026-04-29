@@ -52,6 +52,9 @@
       programs.starship.enable = true;
       programs.fzf.enable = true;
 
+      # Add ~/.local/bin to PATH (for patched hermes wrapper)
+      home.sessionVariables.PATH = "$HOME/.local/bin:$PATH";
+
       # Persist live Noctalia UI changes back to the repo, then rebuild to lock them in
       home.shellAliases.noctalia-save = "nix run ~/NIX#myNoctalia -- ipc call state all > /tmp/noctalia-save.json && mv /tmp/noctalia-save.json ~/NIX/modules/features/noctalia.json";
 
@@ -106,6 +109,7 @@
         ollama
         inputs.llm-agents.packages.${pkgs.system}.hermes-agent
         gemini-cli
+        libreoffice
         asciiquarium
         pipes
         cava
