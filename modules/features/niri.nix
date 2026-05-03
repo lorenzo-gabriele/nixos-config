@@ -13,6 +13,8 @@
         spawn-at-startup = [
           (lib.getExe self'.packages.myNoctalia)
           "${pkgs.lxqt.lxqt-policykit}/bin/lxqt-policykit-agent"
+          "wl-paste --type text --watch cliphist store"
+          "wl-paste --type image --watch cliphist store"
         ];
 
         xwayland-satellite.path = lib.getExe pkgs.xwayland-satellite;

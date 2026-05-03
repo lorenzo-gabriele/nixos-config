@@ -113,8 +113,8 @@
             "labelMode": "index",
             "occupiedColor": "secondary",
             "pillSize": 0.6,
-            "showApplications": false,
-            "showApplicationsHover": false,
+            "showApplications": true,
+            "showApplicationsHover": true,
             "showBadge": true,
             "showLabelsOnlyWhenOccupied": true,
             "unfocusedIconsOpacity": 1
@@ -304,7 +304,7 @@
       "viewMode": "recursive",
       "setWallpaperOnAllMonitors": true,
       "linkLightAndDarkWallpapers": true,
-      "fillMode": "crop",
+      "fillMode": "fit",
       "fillColor": "#000000",
       "useSolidColor": false,
       "solidColor": "#1a1a2e",
@@ -355,7 +355,7 @@
         "firefox"
       ],
       "sortByMostUsed": true,
-      "terminalCommand": "alacritty -e",
+      "terminalCommand": "kitty -e",
       "customLaunchPrefixEnabled": false,
       "customLaunchPrefix": "",
       "viewMode": "list",
@@ -366,7 +366,7 @@
       "enableWindowsSearch": true,
       "enableSessionSearch": true,
       "ignoreMouseInput": false,
-      "screenshotAnnotationTool": "",
+      "screenshotAnnotationTool": "bash -c 'cat | satty --filename -'",
       "overviewLayer": false,
       "density": "default"
     },
@@ -721,7 +721,7 @@
       }
     },
     "notificationsState": {
-      "lastSeenTs": 1777302491000
+      "lastSeenTs": 1777843200000
     },
     "changelogState": {
       "lastSeenVersion": "v4.7.6"
@@ -2109,7 +2109,7 @@
           "path": "Vesper"
         }
       ],
-      "timestamp": 1777224012
+      "timestamp": 1777365367
     },
     "ui": {
       "settingsSidebarExpanded": true

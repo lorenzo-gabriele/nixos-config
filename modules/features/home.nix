@@ -86,18 +86,24 @@
           confirm_os_window_close = 0;
           background_opacity = lib.mkForce "0.95";
           shell = "bash --noprofile";
+
+          tab_bar_edge = "top";
+          tab_bar_style = "powerline";
+          tab_powerline_style = "round";        # or "round" for a softer look
+          tab_title_template = " {index}: {title} ";
+          active_tab_font_style = "bold";
+          inactive_tab_font_style = "normal";
         };
       };
 
       home.packages = with pkgs; [
         gh
-        thunar
         yazi
         kdePackages.kate
-        kdePackages.filelight
         kdePackages.kdeconnect-kde
         gcc
         valgrind
+        gdb
         micro
 	    fastfetch
         sublime4
@@ -112,6 +118,7 @@
         libreoffice
         asciiquarium
         pipes
+        cbonsai
         cava
       ];
 

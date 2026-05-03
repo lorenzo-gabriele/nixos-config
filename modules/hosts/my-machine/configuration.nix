@@ -95,10 +95,8 @@
     };
   };
 
-  # Unlock GNOME Keyring on login so apps like Antigravity can persist credentials
-  services.gnome.gnome-keyring.enable = true;
-  security.pam.services.greetd.enableGnomeKeyring = true;
 
+  services.flatpak.enable = true;
 
   programs.nh = {
     enable = true;
@@ -143,7 +141,6 @@
     narinfo-cache-negative-ttl = 0;
   };
 
-
   environment.systemPackages = with pkgs; [
     git
     brightnessctl    # brightness keys
@@ -153,28 +150,52 @@
     xdg-utils        # makes "open with" work properly
     libnotify        # desktop notifications
     wireplumber      # audio control (wpctl)
-
-nix-tree         # interactively browse nix store dependencies
+    mpv              # general-purpose media player
+    satty            # screenshot annotation tool
+    nix-tree         # interactively browse nix store dependencies
     nomacs           # image viewer
     yazi             # file manager 
-    dust             # disk usage analyzer
+    ncdu             # disk usage analyzer
+    baobab           # disk usage visualizer
+    gdk-pixbuf          # standard image thumbnails (PNG, JPEG, etc.)
+    ffmpegthumbnailer   # video thumbnails
+    ffmpeg-headless     # needed by ffmpegthumbnailer
+    libgsf              # ODF/document thumbnails
+    libheif
+    unzip             # zip support
+    _7zz              # 7z support
+    file-roller
   ];
 
 
   xdg.portal = {
   enable = true;
   extraPortals = [
-    pkgs.xdg-desktop-portal-gtk  # handles file picker with any GTK file manager
+      pkgs.xdg-desktop-portal-gtk  # handles file picker with any GTK file manager
+      pkgs.xdg-desktop-portal-gnome
+    ];
+    config.common.default = "gtk";
+    config.common."org.freedesktop.impl.portal.ScreenCast" = "gnome";
+    config.common."org.freedesktop.impl.portal.RemoteDesktop" = "gnome";
+ };
+
+
+ programs.thunar = {
+  enable = true;
+  plugins = with pkgs.xfce; [
+    thunar-archive-plugin  # right-click "Extract Here" / "Compress"
   ];
-  config.common.default = "gtk";
 };
 
 xdg.portal.config.common."org.freedesktop.impl.portal.FileChooser" = "gtk";
 
-
+ programs.nix-ld.enable = true;
  services.gvfs.enable = true;
+ services.tumbler.enable = true;
  services.udisks2.enable = true;
  services.upower.enable = true;
+ xdg.mime.enable = true;
+ xdg.menus.enable = true;
 
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.
