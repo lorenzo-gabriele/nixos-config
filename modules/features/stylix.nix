@@ -7,6 +7,11 @@
 
       polarity = "dark";
 
+      opacity = {
+        terminal = 0.85;
+        popups = 0.9;
+      };
+
       fonts = {
         monospace = {
           package = pkgs.nerd-fonts.jetbrains-mono;

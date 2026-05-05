@@ -15,7 +15,6 @@
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
 
-
   networking = {
     hostName = "myMachine"; # Define your hostname.
     networkmanager.enable = true;
@@ -88,9 +87,13 @@
   services.greetd = {
     enable = true;
     settings = {
+      initial_session = {
+        command = "niri-session";
+        user = "redue";
+      };
       default_session = {
-        command = "${pkgs.tuigreet}/bin/tuigreet --time --remember --asterisks --cmd niri-session";
-        user = "greeter";
+        command = "niri-session";
+        user = "redue";
       };
     };
   };
@@ -165,6 +168,8 @@
     unzip             # zip support
     _7zz              # 7z support
     file-roller
+    mission-center
+    warehouse         # manage flatpaks
   ];
 
 

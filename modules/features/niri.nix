@@ -15,6 +15,7 @@
           "${pkgs.lxqt.lxqt-policykit}/bin/lxqt-policykit-agent"
           "wl-paste --type text --watch cliphist store"
           "wl-paste --type image --watch cliphist store"
+          "env" "QT_QPA_PLATFORMTHEME=gtk3" "qs" "-c" "noctalia-shell"
         ];
 
         xwayland-satellite.path = lib.getExe pkgs.xwayland-satellite;
@@ -38,6 +39,16 @@
 	    inactive-color = "#313244";
 	  };
 	};
+
+    window-rules = [
+      {
+        background-effect.blur = true;
+        opacity = 0.85;
+        draw-border-with-background = false;
+        geometry-corner-radius = 16;
+        clip-to-geometry = true;
+      }
+    ];
 
         binds = {
 

@@ -84,21 +84,12 @@
         enable = true;
         settings = {
           confirm_os_window_close = 0;
-          background_opacity = lib.mkForce "0.95";
           shell = "bash --noprofile";
-
-          tab_bar_edge = "top";
-          tab_bar_style = "powerline";
-          tab_powerline_style = "round";        # or "round" for a softer look
-          tab_title_template = " {index}: {title} ";
-          active_tab_font_style = "bold";
-          inactive_tab_font_style = "normal";
         };
       };
 
       home.packages = with pkgs; [
         gh
-        yazi
         kdePackages.kate
         kdePackages.kdeconnect-kde
         gcc
@@ -106,19 +97,25 @@
         gdb
         micro
 	    fastfetch
+	    btop
+	    curl
         sublime4
         spotify
         cowsay
         godot
         blender
+        ffmpeg
+        pinta
         qbittorrent
         ollama
         inputs.llm-agents.packages.${pkgs.system}.hermes-agent
-        gemini-cli
         libreoffice
         asciiquarium
         pipes
         cbonsai
+        lolcat
+        fortune
+        genact
         cava
       ];
 

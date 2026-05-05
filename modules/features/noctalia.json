@@ -14,7 +14,7 @@
       "contentPadding": 2,
       "fontScale": 0.97,
       "enableExclusionZoneInset": true,
-      "backgroundOpacity": 0.93,
+      "backgroundOpacity": 0.9500000000000001,
       "useSeparateOpacity": false,
       "marginVertical": 4,
       "marginHorizontal": 4,
@@ -129,6 +129,12 @@
             "hidePassive": false,
             "id": "Tray",
             "pinned": []
+          },
+          {
+            "displayMode": "onhover",
+            "iconColor": "none",
+            "id": "Bluetooth",
+            "textColor": "none"
           },
           {
             "hideWhenZero": false,
@@ -250,7 +256,7 @@
     },
     "ui": {
       "fontDefault": "JetBrainsMono Nerd Font",
-      "fontFixed": "monospace",
+      "fontFixed": "JetBrainsMono Nerd Font Mono",
       "fontDefaultScale": 1,
       "fontFixedScale": 1,
       "tooltipsEnabled": true,
@@ -568,7 +574,7 @@
     "notifications": {
       "enabled": true,
       "enableMarkdown": false,
-      "density": "default",
+      "density": "compact",
       "monitors": [],
       "location": "top_right",
       "overlayLayer": true,
@@ -642,7 +648,7 @@
       "enableUserTheming": false
     },
     "nightLight": {
-      "enabled": false,
+      "enabled": true,
       "forced": false,
       "autoSchedule": true,
       "nightTemp": "4000",
@@ -700,7 +706,7 @@
     "openedPanel": "",
     "lockScreenActive": false,
     "wallpapers": {
-      "eDP-1": "/home/redue/Pictures/Naus/thumb-1920-109265.jpg"
+      "eDP-1": "/home/redue/Pictures/Naus/wallhaven_ym2mz7.jpg"
     },
     "desktopWidgetsEditMode": false,
     "display": {
@@ -721,7 +727,7 @@
       }
     },
     "notificationsState": {
-      "lastSeenTs": 1777843200000
+      "lastSeenTs": 1777992923000
     },
     "changelogState": {
       "lastSeenVersion": "v4.7.6"
@@ -2109,7 +2115,7 @@
           "path": "Vesper"
         }
       ],
-      "timestamp": 1777365367
+      "timestamp": 1777929629
     },
     "ui": {
       "settingsSidebarExpanded": true
