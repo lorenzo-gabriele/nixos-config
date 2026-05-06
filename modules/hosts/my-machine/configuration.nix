@@ -165,6 +165,7 @@
     ffmpeg-headless     # needed by ffmpegthumbnailer
     libgsf              # ODF/document thumbnails
     libheif
+    curl
     unzip             # zip support
     _7zz              # 7z support
     file-roller
@@ -201,6 +202,7 @@ xdg.portal.config.common."org.freedesktop.impl.portal.FileChooser" = "gtk";
  services.upower.enable = true;
  xdg.mime.enable = true;
  xdg.menus.enable = true;
+ services.power-profiles-daemon.enable = true;
 
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.

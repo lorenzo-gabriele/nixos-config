@@ -89,33 +89,41 @@
       };
 
       home.packages = with pkgs; [
+
+      	# Utils
         gh
-        kdePackages.kate
         kdePackages.kdeconnect-kde
+        btop
+        ffmpeg
+
+        # C stuff
         gcc
         valgrind
         gdb
+
+        # Text editors
         micro
-	    fastfetch
-	    btop
-	    curl
         sublime4
+        kdePackages.kate
+
+        # Apps
+        libreoffice
         spotify
-        cowsay
         godot
         blender
-        ffmpeg
         pinta
         qbittorrent
         ollama
         inputs.llm-agents.packages.${pkgs.system}.hermes-agent
-        libreoffice
+
+        # Terminal toys
+        fastfetch
         asciiquarium
+        cowsay
         pipes
         cbonsai
         lolcat
         fortune
-        genact
         cava
       ];
 
