@@ -30,6 +30,7 @@
            xcursor-theme = "Bibata-Modern-Ice";
            xcursor-size = 24;
         };
+    
 
 	layout = {
 	  gaps = 5;
@@ -52,6 +53,8 @@
 
         binds = {
 
+
+		  "Mod+F1".show-hotkey-overlay  = {};
           # ── Media & hardware ────────────────────────────────────────────
           "XF86AudioMute".spawn-sh        = "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle";
           "XF86AudioLowerVolume".spawn-sh = "wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%-";
@@ -81,6 +84,7 @@
           "Mod+A".toggle-overview           = {};
           "Mod+N".consume-or-expel-window-left  = {};
           "Mod+M".consume-or-expel-window-right = {};
+          "Mod+O".toggle-window-rule-opacity  = {};
 
           # ── Focus (vim-style) ───────────────────────────────────────────
           "Mod+H".focus-column-left  = {};

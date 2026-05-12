@@ -12,6 +12,7 @@
 
       home.file.".config/xfce4/helpers.rc".text = ''
         TerminalEmulator=kitty
+        FileManager=thunar
       '';
 
       home.file.".local/share/xfce4/helpers/kitty.desktop".text = ''
@@ -33,6 +34,11 @@
         TERMINAL = "kitty";
         NIXOS_OZONE_WL = "1";
       };
+
+      home.sessionPath = [
+        "$HOME/.local/bin"
+        "$HOME/.lmstudio/bin"
+      ];
 
       services.udiskie.enable = true;
       services.udiskie.tray = "always";
@@ -85,6 +91,9 @@
         settings = {
           confirm_os_window_close = 0;
           shell = "bash --noprofile";
+          hide_window_decorations = "yes";
+
+          cursor_trail = 3;
         };
       };
 
@@ -113,6 +122,8 @@
         blender
         pinta
         qbittorrent
+        quickemu
+        lmstudio
         ollama
         inputs.llm-agents.packages.${pkgs.system}.hermes-agent
 

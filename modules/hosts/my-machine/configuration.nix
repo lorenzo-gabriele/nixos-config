@@ -157,6 +157,7 @@
     satty            # screenshot annotation tool
     nix-tree         # interactively browse nix store dependencies
     nomacs           # image viewer
+    kdePackages.okular  # document viewer
     yazi             # file manager 
     ncdu             # disk usage analyzer
     baobab           # disk usage visualizer
@@ -164,6 +165,8 @@
     ffmpegthumbnailer   # video thumbnails
     ffmpeg-headless     # needed by ffmpegthumbnailer
     libgsf              # ODF/document thumbnails
+    ripgrep
+    fd              # improfed find
     libheif
     curl
     unzip             # zip support
