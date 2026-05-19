@@ -71,6 +71,12 @@
         };
       };
 
+
+      programs.mpv = {
+        enable = true;
+        scripts = [ pkgs.mpvScripts.mpris ];
+      };
+
       xdg.desktopEntries.spotify = {
         name = "Spotify";
         exec = "spotify --enable-features=UseOzonePlatform --ozone-platform=x11 %U";
@@ -101,7 +107,6 @@
 
       	# Utils
         gh
-        kdePackages.kdeconnect-kde
         btop
         ffmpeg
 
@@ -117,6 +122,7 @@
 
         # Apps
         libreoffice
+        spotatui
         spotify
         godot
         blender

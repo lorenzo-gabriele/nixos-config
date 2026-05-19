@@ -11,7 +11,7 @@
       "capsuleOpacity": 1,
       "capsuleColorKey": "none",
       "widgetSpacing": 10,
-      "contentPadding": 2,
+      "contentPadding": 14,
       "fontScale": 0.97,
       "enableExclusionZoneInset": true,
       "backgroundOpacity": 0.9500000000000001,
@@ -28,6 +28,16 @@
       "showOnWorkspaceSwitch": true,
       "widgets": {
         "left": [
+          {
+            "colorizeDistroLogo": false,
+            "colorizeSystemIcon": "tertiary",
+            "colorizeSystemText": "none",
+            "customIconPath": "",
+            "enableColorization": true,
+            "icon": "noctalia",
+            "id": "ControlCenter",
+            "useDistroLogo": true
+          },
           {
             "clockColor": "none",
             "customFont": "",
@@ -89,7 +99,7 @@
             "panelShowAlbumArt": true,
             "scrollingMode": "hover",
             "showAlbumArt": true,
-            "showArtistFirst": true,
+            "showArtistFirst": false,
             "showProgressRing": true,
             "showVisualizer": false,
             "textColor": "none",
@@ -168,14 +178,8 @@
             "textColor": "none"
           },
           {
-            "colorizeDistroLogo": false,
-            "colorizeSystemIcon": "none",
-            "colorizeSystemText": "none",
-            "customIconPath": "",
-            "enableColorization": false,
-            "icon": "noctalia",
-            "id": "ControlCenter",
-            "useDistroLogo": true
+            "iconColor": "none",
+            "id": "SessionMenu"
           }
         ]
       },
@@ -262,11 +266,11 @@
       "tooltipsEnabled": true,
       "scrollbarAlwaysVisible": true,
       "boxBorderEnabled": false,
-      "panelBackgroundOpacity": 0.8,
+      "panelBackgroundOpacity": 0.6,
       "translucentWidgets": false,
       "panelsAttachedToBar": true,
       "settingsPanelMode": "attached",
-      "settingsPanelSideBarCardStyle": false
+      "settingsPanelSideBarCardStyle": true
     },
     "location": {
       "name": "Rome",
@@ -331,7 +335,7 @@
       "panelPosition": "follow_bar",
       "hideWallpaperFilenames": false,
       "useOriginalImages": false,
-      "overviewBlur": 0.4,
+      "overviewBlur": 0.37,
       "overviewTint": 0.6,
       "useWallhaven": false,
       "wallhavenQuery": "",
@@ -636,7 +640,7 @@
     },
     "colorSchemes": {
       "useWallpaperColors": false,
-      "predefinedScheme": "Cream Autumn",
+      "predefinedScheme": "Cream Autumn Old",
       "darkMode": true,
       "schedulingMode": "off",
       "manualSunrise": "06:30",
@@ -708,28 +712,28 @@
     "openedPanel": "",
     "lockScreenActive": false,
     "wallpapers": {
-      "eDP-1": "/home/redue/Pictures/Naus/thumb-1920-109265.jpg"
+      "eDP-1": "/home/redue/Pictures/Naus/wallhaven_6kmm77.jpg"
     },
     "desktopWidgetsEditMode": false,
     "display": {
-      "winit": {
+      "eDP-1": {
+        "name": "eDP-1",
         "connected": true,
-        "height": 1008,
-        "name": "winit",
-        "physical_height": 0,
-        "physical_width": 0,
-        "refresh_rate": 60000,
         "scale": 1,
-        "transform": "Flipped180",
-        "vrr_enabled": false,
-        "vrr_supported": false,
-        "width": 944,
+        "width": 1920,
+        "height": 1080,
         "x": 0,
-        "y": 0
+        "y": 0,
+        "physical_width": 340,
+        "physical_height": 190,
+        "refresh_rate": 60056,
+        "vrr_supported": false,
+        "vrr_enabled": false,
+        "transform": "Normal"
       }
     },
     "notificationsState": {
-      "lastSeenTs": 1778484122000
+      "lastSeenTs": 1779198773000
     },
     "changelogState": {
       "lastSeenVersion": "v4.7.6"
@@ -975,6 +979,46 @@
           },
           "name": "Cream Autumn",
           "path": "Cream Autumn"
+        },
+        {
+          "dark": {
+            "mError": "#ea6962",
+            "mHover": "#e0a84a",
+            "mOnError": "#282828",
+            "mOnHover": "#282828",
+            "mOnPrimary": "#282828",
+            "mOnSecondary": "#282828",
+            "mOnSurface": "#e8d5a3",
+            "mOnSurfaceVariant": "#c8a870",
+            "mOnTertiary": "#282828",
+            "mOutline": "#9a7850",
+            "mPrimary": "#e0a84a",
+            "mSecondary": "#c88a2a",
+            "mShadow": "#000000",
+            "mSurface": "#1d1610",
+            "mSurfaceVariant": "#2a1f12",
+            "mTertiary": "#b8975a"
+          },
+          "light": {
+            "mError": "#c14a4a",
+            "mHover": "#b47109",
+            "mOnError": "#fbf1c7",
+            "mOnHover": "#fbf1c7",
+            "mOnPrimary": "#fbf1c7",
+            "mOnSecondary": "#fbf1c7",
+            "mOnSurface": "#2a1f12",
+            "mOnSurfaceVariant": "#4a3818",
+            "mOnTertiary": "#fbf1c7",
+            "mOutline": "#8a7050",
+            "mPrimary": "#b47109",
+            "mSecondary": "#8a5c00",
+            "mShadow": "#c8a870",
+            "mSurface": "#fbf1c7",
+            "mSurfaceVariant": "#f0dfa0",
+            "mTertiary": "#a07840"
+          },
+          "name": "Cream Autumn Old",
+          "path": "Cream Autumn Old"
         },
         {
           "dark": {
@@ -1294,6 +1338,86 @@
         },
         {
           "dark": {
+            "mError": "#E95678",
+            "mHover": "#232530",
+            "mOnError": "#FDF0ED",
+            "mOnHover": "#FDF0ED",
+            "mOnPrimary": "#16161C",
+            "mOnSecondary": "#16161C",
+            "mOnSurface": "#FDF0ED",
+            "mOnSurfaceVariant": "#6C6F93",
+            "mOnTertiary": "#16161C",
+            "mOutline": "#2E303E",
+            "mPrimary": "#25B2BC",
+            "mSecondary": "#B877DB",
+            "mShadow": "#16161C",
+            "mSurface": "#1A1C23",
+            "mSurfaceVariant": "#232530",
+            "mTertiary": "#FAB795"
+          },
+          "light": {
+            "mError": "#DA103F",
+            "mHover": "#F9CEC3",
+            "mOnError": "#FDF0ED",
+            "mOnHover": "#16161C",
+            "mOnPrimary": "#FDF0ED",
+            "mOnSecondary": "#FDF0ED",
+            "mOnSurface": "#16161C",
+            "mOnSurfaceVariant": "#AF5427",
+            "mOnTertiary": "#FDF0ED",
+            "mOutline": "#F9CEC3",
+            "mPrimary": "#1D8991",
+            "mSecondary": "#8931B9",
+            "mShadow": "#1A1C23",
+            "mSurface": "#FADAD1",
+            "mSurfaceVariant": "#F9CBBE",
+            "mTertiary": "#F77D26"
+          },
+          "name": "Horizon",
+          "path": "Horizon"
+        },
+        {
+          "dark": {
+            "mError": "#c4746e",
+            "mHover": "#393836",
+            "mOnError": "#181616",
+            "mOnHover": "#c5c9c5",
+            "mOnPrimary": "#181616",
+            "mOnSecondary": "#181616",
+            "mOnSurface": "#c5c9c5",
+            "mOnSurfaceVariant": "#c8c093",
+            "mOnTertiary": "#181616",
+            "mOutline": "#625e5a",
+            "mPrimary": "#8a9a7b",
+            "mSecondary": "#8ea4a2",
+            "mShadow": "#181616",
+            "mSurface": "#181616",
+            "mSurfaceVariant": "#282727",
+            "mTertiary": "#c4746e"
+          },
+          "light": {
+            "mError": "#c4746e",
+            "mHover": "#c8c093",
+            "mOnError": "#c5c9c5",
+            "mOnHover": "#181616",
+            "mOnPrimary": "#c5c9c5",
+            "mOnSecondary": "#c5c9c5",
+            "mOnSurface": "#181616",
+            "mOnSurfaceVariant": "#181616",
+            "mOnTertiary": "#c5c9c5",
+            "mOutline": "#8a9a7b",
+            "mPrimary": "#8a9a7b",
+            "mSecondary": "#8ea4a2",
+            "mShadow": "#737c73",
+            "mSurface": "#c5c9c5",
+            "mSurfaceVariant": "#c8c093",
+            "mTertiary": "#c4746e"
+          },
+          "name": "Kanagawa Dragon",
+          "path": "Kanagawa Dragon"
+        },
+        {
+          "dark": {
             "mError": "#c4746e",
             "mHover": "#363646",
             "mOnError": "#1F1F28",
@@ -1526,6 +1650,46 @@
         },
         {
           "dark": {
+            "mError": "#db6d6d",
+            "mHover": "#db6d6d",
+            "mOnError": "#1a1b1c",
+            "mOnHover": "#1a1b1c",
+            "mOnPrimary": "#1a1b1c",
+            "mOnSecondary": "#1a1b1c",
+            "mOnSurface": "#cdc5bd",
+            "mOnSurfaceVariant": "#a69d96",
+            "mOnTertiary": "#1a1b1c",
+            "mOutline": "#5a5b5c",
+            "mPrimary": "#db6d6d",
+            "mSecondary": "#d1b394",
+            "mShadow": "#000000",
+            "mSurface": "#1a1b1c",
+            "mSurfaceVariant": "#252627",
+            "mTertiary": "#8faeb1"
+          },
+          "light": {
+            "mError": "#d95f5f",
+            "mHover": "#c96666",
+            "mOnError": "#fdf8f2",
+            "mOnHover": "#fdf8f2",
+            "mOnPrimary": "#fdf8f2",
+            "mOnSecondary": "#fdf8f2",
+            "mOnSurface": "#1a1b1c",
+            "mOnSurfaceVariant": "#545556",
+            "mOnTertiary": "#fdf8f2",
+            "mOutline": "#969798",
+            "mPrimary": "#bf5a5a",
+            "mSecondary": "#94765a",
+            "mShadow": "#cdc5bd",
+            "mSurface": "#fdf8f2",
+            "mSurfaceVariant": "#f2ebe4",
+            "mTertiary": "#5c8286"
+          },
+          "name": "Murata",
+          "path": "Murata"
+        },
+        {
+          "dark": {
             "mError": "#ff0000",
             "mHover": "#0b3335",
             "mOnError": "#062329",
@@ -1563,6 +1727,46 @@
           },
           "name": "NaySayer",
           "path": "NaySayer"
+        },
+        {
+          "dark": {
+            "mError": "#B74E90",
+            "mHover": "#22d3ee",
+            "mOnError": "#000000",
+            "mOnHover": "#000000",
+            "mOnPrimary": "#000000",
+            "mOnSecondary": "#000000",
+            "mOnSurface": "#80C8F4",
+            "mOnSurfaceVariant": "#00a8f4",
+            "mOnTertiary": "#000000",
+            "mOutline": "#0A2030",
+            "mPrimary": "#00a8f4",
+            "mSecondary": "#22d3ee",
+            "mShadow": "#000000",
+            "mSurface": "#000000",
+            "mSurfaceVariant": "#06101A",
+            "mTertiary": "#0ea5e9"
+          },
+          "light": {
+            "mError": "#8A3068",
+            "mHover": "#0284c7",
+            "mOnError": "#FFFFFF",
+            "mOnHover": "#FFFFFF",
+            "mOnPrimary": "#FFFFFF",
+            "mOnSecondary": "#FFFFFF",
+            "mOnSurface": "#06101A",
+            "mOnSurfaceVariant": "#0284c7",
+            "mOnTertiary": "#FFFFFF",
+            "mOutline": "#80C0D8",
+            "mPrimary": "#0284c7",
+            "mSecondary": "#0891b2",
+            "mShadow": "#C0DAE8",
+            "mSurface": "#F0FAFF",
+            "mSurfaceVariant": "#D8EEF8",
+            "mTertiary": "#0ea5e9"
+          },
+          "name": "Neon Surf",
+          "path": "Neon Surf"
         },
         {
           "dark": {
@@ -2117,7 +2321,7 @@
           "path": "Vesper"
         }
       ],
-      "timestamp": 1777929629
+      "timestamp": 1779110888
     },
     "ui": {
       "settingsSidebarExpanded": true

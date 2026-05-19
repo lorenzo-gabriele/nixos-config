@@ -1,9 +1,5 @@
 { self, inputs, ... }: {
-
-
-  flake.nixosModules.myMachineConfiguration = { config, pkgs, ... }:
-
-{
+  flake.nixosModules.myMachineConfiguration = { config, pkgs, lib, ... }: {
   imports =
     [ # Include the results of the hardware scan.
       self.nixosModules.myMachineHardware
@@ -19,6 +15,11 @@
     hostName = "myMachine"; # Define your hostname.
     networkmanager.enable = true;
   };
+
+  swapDevices = [{
+    device = "/swapfile";
+    size = 16 * 1024;  # 16GB - adjust based on your RAM size
+  }];
 
   hardware.bluetooth.enable = true;
   hardware.bluetooth.powerOnBoot = true;
@@ -108,6 +109,7 @@
     flake = "/home/redue/NIX";
   };
 
+
   nix.settings.auto-optimise-store = true;
   nix.settings.max-jobs = "auto";
 
@@ -119,6 +121,9 @@
 
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
+  nixpkgs.config.allowUnfreePredicate = pkg: builtins.elem (lib.getName pkg) [
+    "replace"
+  ];
   nixpkgs.config.permittedInsecurePackages = [
    "openssl-1.1.1w"
   ];
@@ -206,6 +211,7 @@ xdg.portal.config.common."org.freedesktop.impl.portal.FileChooser" = "gtk";
  xdg.mime.enable = true;
  xdg.menus.enable = true;
  services.power-profiles-daemon.enable = true;
+ programs.steam.enable = true;
 
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.

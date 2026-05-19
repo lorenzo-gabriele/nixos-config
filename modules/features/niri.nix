@@ -8,7 +8,7 @@
 
   perSystem = { pkgs, lib, self', ... }: {
     packages.myNiri = inputs.wrapper-modules.wrappers.niri.wrap {
-      inherit pkgs; 
+      inherit pkgs;
       settings = {
         spawn-at-startup = [
           (lib.getExe self'.packages.myNoctalia)
@@ -41,15 +41,32 @@
 	  };
 	};
 
-    window-rules = [
-      {
-        background-effect.blur = true;
-        opacity = 0.85;
-        draw-border-with-background = false;
-        geometry-corner-radius = 16;
-        clip-to-geometry = true;
-      }
-    ];
+	window-rules = [
+	  {
+	    background-effect.blur = true;
+	    opacity = 0.75;
+	    draw-border-with-background = false;
+	    geometry-corner-radius = 16;
+	    clip-to-geometry = true;
+	  }
+	  {
+	    matches = [{ app-id = "firefox"; }];
+	    opacity = 0.80;
+	  }
+	  {
+	    matches = [{
+	      app-id = "steam";
+	      title = "^notificationtoasts_\\d+_desktop$";
+	    }];
+	    default-floating-position = _: {
+	      props = {
+	        x = 10;
+	        y = 10;
+	        relative-to = "bottom-right";
+	      };
+	    };
+	  }
+	];
 
         binds = {
 

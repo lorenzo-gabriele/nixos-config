@@ -5,10 +5,11 @@
 
       base16Scheme = "${pkgs.base16-schemes}/share/themes/gruvbox-material-dark-hard.yaml";
 
+	  targets.gtk.enable = true;
+	  
       polarity = "dark";
 
       opacity = {
-        terminal = 0.85;
         popups = 0.9;
       };
 
