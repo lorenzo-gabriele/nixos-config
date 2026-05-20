@@ -30,15 +30,28 @@
            xcursor-theme = "Bibata-Modern-Ice";
            xcursor-size = 24;
         };
+
+        
+    layer-rules = [
+      {
+        matches = [{ namespace = "^noctalia-wallpaper*"; }];
+        place-within-backdrop = true;
+      }
+    ];
     
 
 	layout = {
 	  gaps = 5;
+	  background-color = "transparent";
 	  focus-ring = {
 	    width = 2;
 	    active-color = "#a6e3a1";
 	    inactive-color = "#313244";
 	  };
+	};
+
+	overview = {
+	  workspace-shadow.off = {};
 	};
 
 	window-rules = [

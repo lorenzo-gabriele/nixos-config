@@ -5,7 +5,7 @@
       "barType": "simple",
       "position": "top",
       "monitors": [],
-      "density": "default",
+      "density": "comfortable",
       "showOutline": false,
       "showCapsule": true,
       "capsuleOpacity": 1,
@@ -135,7 +135,7 @@
             "blacklist": [],
             "chevronColor": "none",
             "colorizeIcons": false,
-            "drawerEnabled": false,
+            "drawerEnabled": true,
             "hidePassive": false,
             "id": "Tray",
             "pinned": []
@@ -259,8 +259,8 @@
       "smoothScrollEnabled": true
     },
     "ui": {
-      "fontDefault": "JetBrainsMono Nerd Font",
-      "fontFixed": "JetBrainsMono Nerd Font Mono",
+      "fontDefault": "Maple Mono NF",
+      "fontFixed": "Maple Mono NF",
       "fontDefaultScale": 1,
       "fontFixedScale": 1,
       "tooltipsEnabled": true,
@@ -712,7 +712,7 @@
     "openedPanel": "",
     "lockScreenActive": false,
     "wallpapers": {
-      "eDP-1": "/home/redue/Pictures/Naus/wallhaven_6kmm77.jpg"
+      "eDP-1": "/home/redue/Pictures/Naus/wallhaven_p21m2m.jpg"
     },
     "desktopWidgetsEditMode": false,
     "display": {

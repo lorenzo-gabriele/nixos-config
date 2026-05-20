@@ -105,6 +105,8 @@
 
       home.packages = with pkgs; [
 
+      	maple-mono.NF
+
       	# Utils
         gh
         btop
