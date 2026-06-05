@@ -48,6 +48,12 @@
         icon_names.media = [ "udiskie-media" ];
       };
 
+      home.activation.removeKvantumConflict = {
+        before = [ "linkGeneration" ];
+        after = [ "writeBoundary" ];
+        data = "rm -rf $HOME/.config/Kvantum/Base16Kvantum";
+      };
+
       home.file.".local/share/icons/hicolor/64x64/apps/udiskie-media.png".source = pkgs.runCommand "udiskie-media.png" {
         nativeBuildInputs = [ pkgs.librsvg ];
       } ''
@@ -64,6 +70,11 @@
       # Persist live Noctalia UI changes back to the repo, then rebuild to lock them in
       home.shellAliases.noctalia-save = "nix run ~/NIX#myNoctalia -- ipc call state all > /tmp/noctalia-save.json && mv /tmp/noctalia-save.json ~/NIX/modules/features/noctalia.json";
 
+	  # Opens spotatui without updating (it can't write in the nix  store anyway so I think it fails silently when run without the -U flag)
+	  home.shellAliases.spotatui = "spotatui -U";
+		
+	  home.shellAliases.freedoom = "chocolate-doom -iwad ~/freedoom-0.13.0/freedoom2.wad";
+	  
       # Force dark mode preference for apps Stylix can't directly theme
       dconf.settings = {
         "org/gnome/desktop/interface" = {
@@ -104,7 +115,8 @@
       };
 
       home.packages = with pkgs; [
-
+		
+		# Fonts
       	maple-mono.NF
 
       	# Utils
@@ -122,6 +134,9 @@
         sublime4
         kdePackages.kate
 
+        # Very important
+        chocolate-doom
+
         # Apps
         libreoffice
         spotatui
@@ -134,8 +149,10 @@
         lmstudio
         ollama
         inputs.llm-agents.packages.${pkgs.system}.hermes-agent
+        ungoogled-chromium
+        gnome-clocks
 
-        # Terminal toys
+        # Terminal toys (also very important)
         fastfetch
         asciiquarium
         cowsay
