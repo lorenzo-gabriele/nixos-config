@@ -70,10 +70,12 @@
       # Persist live Noctalia UI changes back to the repo, then rebuild to lock them in
       home.shellAliases.noctalia-save = "nix run ~/NIX#myNoctalia -- ipc call state all > /tmp/noctalia-save.json && mv /tmp/noctalia-save.json ~/NIX/modules/features/noctalia.json";
 
-	  # Opens spotatui without updating (it can't write in the nix  store anyway so I think it fails silently when run without the -U flag)
+	  # Opens spotatui without updating (it can't write in the nix store anyway so I think it fails silently when run without the -U flag)
 	  home.shellAliases.spotatui = "spotatui -U";
 		
 	  home.shellAliases.freedoom = "chocolate-doom -iwad ~/freedoom-0.13.0/freedoom2.wad";
+
+	home.shellAliases.mcp-start = "mcp-proxy --port 3010 -- mcp-server-filesystem /home/redue & mcp-proxy --port 3011 -- mcp-server-git --repository /home/redue/NIX & mcp-proxy --port 3012 -- godot-mcp";
 	  
       # Force dark mode preference for apps Stylix can't directly theme
       dconf.settings = {
@@ -101,7 +103,6 @@
         package = pkgs.papirus-icon-theme;
         name = "Papirus-Dark";
       };
-      gtk.gtk4.theme = null;
 
       programs.kitty = {
         enable = true;
@@ -123,6 +124,7 @@
         gh
         btop
         ffmpeg
+        python3
 
         # C stuff
         gcc
@@ -147,10 +149,12 @@
         qbittorrent
         quickemu
         lmstudio
+        antigravity
         ollama
-        inputs.llm-agents.packages.${pkgs.system}.hermes-agent
         ungoogled-chromium
         gnome-clocks
+        boxbuddy
+        drawy
 
         # Terminal toys (also very important)
         fastfetch
@@ -161,6 +165,12 @@
         lolcat
         fortune
         cava
+
+        # MCP
+        mcp-server-filesystem
+        mcp-server-git
+        mcp-proxy
+        godot-mcp
       ];
 
     };

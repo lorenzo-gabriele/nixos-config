@@ -15,8 +15,8 @@
 
       fonts = {
         monospace = {
-          package = pkgs.nerd-fonts.jetbrains-mono;
-          name = "JetBrainsMono Nerd Mono";
+          package = pkgs.maple-mono.NF;
+          name = "MapleMono NF";
         };
         sansSerif = {
           package = pkgs.inter;
@@ -33,6 +33,7 @@
       };
 
       # When changing cursor here, also change it in niri.nix
+      # The specific cursor name can be specified in niri.nix only but this seem to be needed here
       cursor = {
         package = pkgs.bibata-cursors;
         name = "Bibata-Modern-Ice";

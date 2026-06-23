@@ -63,6 +63,10 @@
           { matches = [{ app-id = "kwrite"; }];       opacity = 0.95; }
           { matches = [{ app-id = "nomacs"; }];       opacity = 1.00; }
           { matches = [{ app-id = "blender"; }];       opacity = 1.00; }
+          { matches = [{ app-id = "mpv"; }];       opacity = 1.00; }
+          { matches = [{ app-id = "chromium"; }];       opacity = 1.00; }
+          { matches = [{ app-id = "okular"; }];       opacity = 1.00; }
+          { matches = [{ app-id = "antigravity"; }];       opacity = 1.00; }
           {
             matches = [{
               app-id = "steam";

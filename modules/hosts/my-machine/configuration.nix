@@ -78,7 +78,7 @@
   # Define a user account. Don't forget to set a password with 'passwd'.
   users.users.redue = {
     isNormalUser = true;
-    description = "Lorenzo";
+    description = "Redue";
     extraGroups = [ "networkmanager" "wheel" "video"];
     packages = with pkgs; [
     #  thunderbird
@@ -171,7 +171,7 @@
     ffmpeg-headless     # needed by ffmpegthumbnailer
     libgsf              # ODF/document thumbnails
     ripgrep
-    fd              # improfed find
+    fd              # improved find
     libheif
     curl
     unzip             # zip support
@@ -212,6 +212,7 @@ xdg.portal.config.common."org.freedesktop.impl.portal.FileChooser" = "gtk";
  xdg.menus.enable = true;
  services.power-profiles-daemon.enable = true;
  programs.steam.enable = true;
+ virtualisation.podman.enable = true;
 
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.
